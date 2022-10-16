@@ -72,4 +72,15 @@ public class MathServiceTest {
         assertEquals(percentile, 87.00);
 
     }
+
+    @Test
+    public void percentile_max_rank(){
+        List<Double> list =
+                new ArrayList<>(Arrays
+                        .asList(77.0, 76.0, 88.0, 85.0, 87.0, 78.0, 80.0, 95.0, 90.0, 83.0, 89.0, 93.0, 75.0, 70.0, 67.0));
+        Double percentile = mathService.percentile(list, 100.0);
+
+        assertEquals(percentile, 95.00);
+
+    }
 }
