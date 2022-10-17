@@ -1,11 +1,6 @@
 # spring-boot math-api
 
-Api with mathematical operations
-- /max - (http://localhost:8080/math/max?numbers=1,5,4,7,8&quantity=3)
-- /min - (http://localhost:8080/math/min?numbers=1,5,4,7,8&quantity=3)
-- /average - (http://localhost:8080/math/average?numbers=1,5,4,7,8)
-- /median - (http://localhost:8080/math/median?numbers=67,70,75,76,77,78,80,83,85,87,88,89,90,93,95)
-- /percentile (http://localhost:8080/math/percentile?numbers=67,70,75,76,77,78,80,83,85,87,88,89,90,93,95&rank=66)
+Api with mathematical operations built with spring-boot and lombok
 
 ## Requirements
 
@@ -27,3 +22,11 @@ mvn spring-boot:run
 mvn package
 docker run --rm -d  -p 8080:8080/tcp douglas/math-api:0.0.1-SNAPSHOT
 ```
+
+After application is running, Use the links below to test the operation endpoints:
+
+- [/max](http://localhost:8080/math/max?numbers=1,5,4,7,8&quantity=3)
+- [/min](http://localhost:8080/math/min?numbers=1,5,4,7,8&quantity=3)
+- [/average](http://localhost:8080/math/average?numbers=1,5,4,7,8)
+- [/median](http://localhost:8080/math/median?numbers=67,70,75,76,77,78,80,83,85,87,88,89,90,93,95)
+- [/percentile](http://localhost:8080/math/percentile?numbers=67,70,75,76,77,78,80,83,85,87,88,89,90,93,95&rank=66)
