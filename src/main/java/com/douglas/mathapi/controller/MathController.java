@@ -1,6 +1,5 @@
 package com.douglas.mathapi.controller;
 
-import com.douglas.mathapi.controller.model.ResponseWrapper;
 import com.douglas.mathapi.service.MathService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

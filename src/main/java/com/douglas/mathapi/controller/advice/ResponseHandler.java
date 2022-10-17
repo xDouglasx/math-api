@@ -3,6 +3,7 @@ package com.douglas.mathapi.controller.advice;
 import com.douglas.mathapi.controller.model.ResponseWrapper;
 import org.springframework.core.MethodParameter;
 import org.springframework.core.annotation.AnnotationUtils;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.server.ServerHttpRequest;
@@ -24,7 +25,7 @@ public class ResponseHandler implements ResponseBodyAdvice<Object> {
     public Object beforeBodyWrite(Object body, MethodParameter returnType, MediaType selectedContentType,
                                   Class<? extends HttpMessageConverter<?>> selectedConverterType,
                                   ServerHttpRequest request, ServerHttpResponse response) {
-        return new ResponseWrapper<>(200, body);
+        return new ResponseWrapper<>(HttpStatus.OK.value(), body);
     }
 
 
